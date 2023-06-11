@@ -4,10 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS BAND STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src=""></script>
 </head>
 <body>
     
-    
+    <header>
+        <hr> <!-- maybe delete later -->
+
+        <section class="container">
+            <h3>JS BAND STORE / Your full name</h3>
+            
+            <nav> <!-- should to wrap every element in div, but then will be column -->
+                
+                <div>
+                    <img src="../images/cart.svg" id="cart-icon" alt="Cart Icon" width="50" height="50">
+                </div>
+                
+                <div>
+                    <button class="main-button bold-text">Sign-Out</button>
+                </div>
+            
+                <div>
+                    <img src="../images/avatar.png" alt="User Avatar" width="50" height="50">
+                    <span id="user-name" class="bold-text">Username</span>
+                </div>
+
+            </nav>
+        </section>  
+
+        <hr> <!-- maybe delete later -->
+    </header>
+
+    <main>
+
+        <section class="cover-section">
+            <img src="../books/angular_up_and_running.jpg" alt="Book Angular" class="book-cover">
+            <p><span class="bold-text">Desciption: </span><span>This book will demystify Angular as a framework, as well as provide clear instructions and examples on how to get started with writing scalable Angular applications.</span></p>
+        </section>
+        </section>
+
+        <section class="info-section">
+            <p class="bold-text"><span >Book name: </span><span>Angular: Up and Running</span></p>
+            <p><span class="bold-text">Book author: </span><span>Sheyam Seshadri</span></p>
+            <p><span class="bold-text">Book level: </span><span>Beginner</span></p>
+            <p><span class="bold-text">Book tags: </span><span>
+                core,
+                frontend,
+                javascript,
+                angular
+            </span></p>
+        </section>
+
+        <section class="price-section bold-text">
+            <form action="/">
+                
+                <p id="price-field">Price, $ <span>29.99</span></p>
+                <p><label for="count">Count </label>
+                <input type="number" id="count-books" value="1"></p>
+                <p>Total price <span>29.99</span></p>
+                <div><button class="main-button bold-text">Add to card</button></div>
+                
+            </form>
+        
+    </main>
 
 </body>
 </html>
