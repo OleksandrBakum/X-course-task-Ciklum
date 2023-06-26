@@ -4,31 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS BAND STORE</title>
-    <link rel="stylesheet" href="">
-    <script src=""></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <header>
-        <hr> <!-- maybe delete later -->
-        <h3>JS BAND STORE / Your full name</h3>
-        <hr> <!-- maybe delete later -->
+
+        <section class="container">
+            <h3 class="site-name">JS BAND STORE / Your full name</h3>
+        </section>  
+
     </header>
 
     <main>
-        <section>
-            <img src="../images/avatar.png" alt="User Avatar" width="300" height="300">
-        </section>
+        
+            <section class="container">
+                <img src="../images/avatar.png" alt="User Avatar" id="user-avatar">
+            </section>
 
-        <section>
-            <form action="/">
-                <label for="user_Name">Username</label> <br> <!-- maybe delete later -->
-                <br> <!-- maybe delete later -->
-                <input type="text" placeholder="type Username" id="user_Name"> <br> <!-- maybe delete later -->
-                <button type="submit" disabled>Sign-In</button>
-            </form>
-        </section>
+            <section class="container">
+                <form action="#">
+                    <div class="container user-info">
+                        <label for="user-name" class="bold-text">Username</label>
+                        <input type="text" placeholder="type Username" id="user-name">
+                        <button type="submit" class="main-button bold-text">Sign-In</button>
+                    </div>
+                </form>
+            </section>
+        
     </main>
+
+    <script src=""></script>
 
 </body>
 </html>

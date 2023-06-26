@@ -1,3 +1,5 @@
+/* Class Container not used */
+
 * {                        
     padding: 0; 
     margin: 0;
@@ -5,11 +7,16 @@
     font-family: sans-serif;
  }
  
- .bold-text {
+.bold-text {
     font-weight: 600;
 }
 
-.container h3 {
+header {
+    border: 2px solid gray;
+    border-style: solid hidden;
+}
+
+.site-name {
     padding: 2.65vh 0.5vw;
 }
 
@@ -27,8 +34,24 @@ main {
     margin-bottom: 3vh;
 }
 
-.user-info input, .user-info label, .main-button {
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#user-name, .user-info label, .main-button {
     width: 200px;
+}
+
+.user-info label {
+    padding-left: 2.5vw;
+}
+
+#user-name {
+    padding: 0.7vw;
+    border-radius: 0.4vw;
+    text-align: center;
+    font-size: 1.1rem;
 }
 
 .main-button {
@@ -39,17 +62,6 @@ main {
     border: 2px solid gray;
     transition: 0.4s;
     cursor: pointer;
-}
-
-.container-main label {
-    padding-left: 2.5vw;
-}
-
-#user-name {
-    padding: 0.7vw;
-    border-radius: 0.4vw;
-    text-align: center;
-    font-size: 1.1rem;
 }
 
 .main-button:hover {
