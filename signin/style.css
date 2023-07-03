@@ -1,50 +1,85 @@
-.flex-centered {
-    flex-direction: column;
+/* Class Container not used */
+
+* {                        
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+ }
+ 
+.bold-text {
+    font-weight: 600;
+}
+
+header {
+    border: 2px solid gray;
+    border-style: solid hidden;
 }
 
 .site-name {
-    padding: 3.35vh 1vw;
+    padding: 2.65vh 0.5vw;
 }
 
 main {
-    font-size: 1.2em;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     margin: 10vh auto;
 }
 
 #user-avatar {
-    width: 160px;       /*absolute values, as in instruction*/
+    width: 160px;
     height: 160px;
-    margin-bottom: 15%;
+    margin-bottom: 3vh;
 }
 
-.user-info label, #user-input, .main-button {
-    width: 200px;      /*absolute values, as in instruction*/
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#user-name, .user-info label, .main-button {
+    width: 200px;
 }
 
 .user-info label {
-    font-size: 1.1em;
+    padding-left: 2.5vw;
 }
 
-#user-input {
-    padding: 5%;
-    font-size: 0.9em;
+#user-name {
+    padding: 0.7vw;
+    border-radius: 0.4vw;
+    text-align: center;
+    font-size: 1.1rem;
 }
 
 .main-button {
-    margin-top: 25px;  /*absolute values, as in instruction*/
-    font-size: 1.0em;
-    padding: 5%;
+    margin-top: 3vh;
+    font-size: 1.1rem;
+    padding: 0.7vw;
+    border-radius: 0.4vw;
+    border: 2px solid gray;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.main-button:hover {
+    background-color: white;
+    border: 2px solid black;
 }
 
 @media only screen and (max-width: 320px) {
-    #user-input, .main-button {
-        width: 100%;
-        margin: 15px 8px;   /*absolute values, as in instruction*/
+    .user-info input, .main-button {
+        width: 100vw;
+        margin: 0 8px;
     }
 
     #user-avatar {
-        width: 200px;      /*absolute values, as in instruction*/
-        height: 200px;         
+        width: 200px;
+        height: 200px;
     }
 }
+
+
 

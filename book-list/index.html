@@ -5,48 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS BAND STORE</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../common-style.css">
 </head>
 <body>
     
     <header>
 
-        <div class="container flex-centered adaptive">
+        <section class="container">
             <h3 class="site-name">JS BAND STORE / Your full name</h3>
             
-            <nav>
-                <ul class="flex-centered adaptive">
-                    <li class="nav-container">
-                       <button class="no-border pointer"><img src="../images/cart.svg" alt="Shopping Icon" id="cart-icon"></button>
-                    </li>
-                    
-                    <li class="nav-container">
-                        <button id="sign-button" class="main-button bold-text rounded pointer">Sign-Out</button>
-                    </li>
+            <nav> <!-- should to wrap every element in div, but then will be column -->
                 
-                    <li class="nav-container">
-                        <button id="user-container" class="nav-container flex-centered rounded no-border pointer"><img src="../images/avatar.png" alt="UserAvatar" id="avatar-icon"><span id="user-name" class="bold-text">Username</span></button>
-                        
-                    </li>
-                </ul>
+                <div class="nav-container">
+                    <img src="../images/cart.svg" id="cart-icon" alt="Shopping Icon" width="50" height="50">
+                </div>
+                
+                <div class="nav-container">
+                    <button class="main-button bold-text">Sign-Out</button>
+                </div>
+            
+                <div class="nav-container" id="user-container"> 
+                    <img src="../images/avatar.png" alt="User Avatar" width="50" height="50">
+                    <span id="user-name" class="bold-text">Username</span>
+                </div>
 
             </nav>
-        </div>  
+        </section>  
 
     </header>
 
     <main>
 
         <section class="sort-container">
-            <input type="text" class="fields" placeholder="Search by book name" id="search-input">
-            <select name="sort_input" class="fields rounded" id="price-input"> <!-- later options should fetch from json-->
+            <input type="text" class="inputs" placeholder="Search by book name" id="search-input">
+            <select name="sort_input" class="inputs" id="price-input"> <!-- later options should fetch from json-->
                 <option value="Price">Price</option>
                 <option value="Amount">Amount</option> 
                 <option value="Author">Author</option>
             </select>
         </section>
 
-        <section id="root" class="flex-centered"></section>
+        <section id="root"></section>
         
     </main>
 

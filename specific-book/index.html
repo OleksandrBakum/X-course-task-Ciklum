@@ -6,49 +6,47 @@
     <title>JS BAND STORE</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../common-style.css">
+
 </head>
 <body>
     
     <header>
 
-        <div class="container flex-centered adaptive">
+        <section class="container">
             <h3 class="site-name">JS BAND STORE / Your full name</h3>
             
-            <nav>
-                <ul class="flex-centered adaptive">
-                    <li class="nav-container">
-                       <button class="no-border pointer"><img src="../images/cart.svg" alt="Shopping Icon" id="cart-icon"></button>
-                    </li>
-                    
-                    <li class="nav-container">
-                        <button id="sign-button" class="main-button bold-text rounded pointer">Sign-Out</button>
-                    </li>
+            <nav> <!-- should to wrap every element in div, but then will be column -->
                 
-                    <li class="nav-container">
-                        <button id="user-container" class="nav-container flex-centered rounded no-border pointer"><img src="../images/avatar.png" alt="UserAvatar" id="avatar-icon"><span id="user-name" class="bold-text">Username</span></button>
-                        
-                    </li>
-                </ul>
+                <div class="nav-container">
+                    <img src="../images/cart.svg" id="cart-icon" alt="Shopping Icon" width="50" height="50">
+                </div>
+                
+                <div class="nav-container">
+                    <button class="main-button bold-text">Sign-Out</button>
+                </div>
+            
+                <div class="nav-container" id="user-container">
+                    <img src="../images/avatar.png" alt="UserAvatar" width="50" height="50">
+                    <span id="user-name" class="bold-text">Username</span>
+                </div>
 
             </nav>
-        </div>  
+        </section>  
 
     </header>
 
-    <main class="flex-centered">
+    <main>
 
         <section class="cover-section">
-            <div class="cover-container">
-                <img src="../books/angular_up_and_running.jpg" alt="Book Angular" class="book-cover pointer">
-            </div>
-            <p><span class="bold-text">Description: </span><span>This book will demystify Angular as a framework, as well as provide clear instructions and examples on how to get started with writing scalable Angular applications.</span></p>
+            <img src="../books/angular_up_and_running.jpg" alt="Book Angular" class="book-cover">
+            <p class="info-text"><span class="bold-text">Description: </span><span>This book will demystify Angular as a framework, as well as provide clear instructions and examples on how to get started with writing scalable Angular applications.</span></p>
         </section>
 
         <section class="info-section">
-            <p class="bold-text"><span>Book name: </span><span>Angular: Up and Running</span></p>
-            <p><span class="bold-text">Book author: </span><span>Sheyam Seshadri</span></p>
-            <p><span class="bold-text">Book level: </span><span>Beginner</span></p>
-            <p><span class="bold-text">Book tags: </span><span>
+            <p class="bold-text info-text"><span>Book name: </span><span>Angular: Up and Running</span></p>
+            <p class="info-text"><span class="bold-text">Book author: </span><span>Sheyam Seshadri</span></p>
+            <p class="info-text"><span class="bold-text">Book level: </span><span>Beginner</span></p>
+            <p class="info-text"><span class="bold-text">Book tags: </span><span>
                 core,
                 frontend,
                 javascript,
@@ -58,19 +56,18 @@
 
         <section class="price-section bold-text">
             <form action="/">
-                    <div id="price-container">
-                        
-                        <p id="price-field" class="price-p">Price, $ <span>29.99</span></p>
+                
+                <p id="price-field" class="price-p">Price, $ <span>29.99</span></p>
 
-                        <p class="pop-up-container price-p pointer"><label for="count-books">Count </label>
-                            <span class="pop-up flex-centered rounded">Please, enter value from 1 to 42</span>
-                            <input type="number" id="count-books" class="rounded" value="1" min="1"> <!-- max should set via JS from “amount” в books.json -->
-                        </p>   
+                <p class="pop-up-container price-p"><label for="count-books">Count </label>
+                    <span class="pop-up">Please, enter value from 1 to 42</span>
+                    <input type="number" id="count-books" value="1" min="1"> <!-- max should set via JS from “amount” в books.json -->
+                </p>   
 
-                    <p class="price-p">Total price <span id="total-price">29.99</span></p> <!-- change later with fetch and json() -->
-                </div>
+                <p class="price-p">Total price <span id="total-price">29.99</span></p> <!-- change later with fetch and json() -->
+                <div class="button-container"><button class="main-button bold-text">Add to card</button></div>
+                
             </form>
-            <button id="add-button" class="main-button bold-text rounded pointer">Add to cart</button>
         </section>
         
     </main>

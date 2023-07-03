@@ -5,10 +5,6 @@
     font-family: sans-serif;
  }
  
-ul {
-    list-style: none;
-}
-
 .flex-centered {
     display: flex;
     justify-content: space-between;
@@ -25,11 +21,6 @@ ul {
 
 .rounded {
     border-radius: 9px;
-}
-
-.no-border {
-    border-style: none;
-    background-color: transparent;
 }
 
 .pointer {
@@ -53,7 +44,6 @@ header {
 #cart-icon {
     opacity: 0.6;
     transition: 0.4s;
-
 }
 
 #cart-icon:hover {
@@ -79,7 +69,7 @@ header {
 }
 
 #user-name {
-    font-size: 1.3em;
+    font-size: 1.2em;
     padding-left: 1vw;
 }
 
@@ -91,17 +81,19 @@ header {
 }
 
 @media only screen and (max-width: 800px) {
-    #sign-button {
-       font-size: 1em;
-   }
-
-   #user-container {
-       font-size: 0.8em;
-   }
-
+    *, .main-button {
+        font-size: 1em;
+    }
+    .cover-section, .info-section, .price-section {
+        font-size: 0.8em;
+    }
 }
 
 @media only screen and (max-width: 500px) {
+    *, .main-button {
+        font-size: 0.9em;
+    }
+
     header, nav, .adaptive {
         display: flex;
         flex-direction: column;
@@ -110,9 +102,4 @@ header {
     .nav-container {
         margin: 1vh 0;
     }
-
-    #sign-button {
-        font-size: 1.4em;
-        padding: 2vw;
-    }
-} 
+}
