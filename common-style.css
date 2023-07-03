@@ -1,0 +1,118 @@
+* {                        
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+ }
+ 
+ul {
+    list-style: none;
+}
+
+.flex-centered {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.centered {
+    text-align: center;
+}
+
+.bold-text {
+    font-weight: 600;
+}
+
+.rounded {
+    border-radius: 9px;
+}
+
+.no-border {
+    border-style: none;
+    background-color: transparent;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+header {
+    border: 2px solid gray;
+    border-style: solid hidden;
+}
+
+.nav-container {
+    padding: 0 0.5vw;
+}
+
+#cart-icon, #avatar-icon {
+    width: 7vh;
+    height: 7vh;
+}
+
+#cart-icon {
+    opacity: 0.6;
+    transition: 0.4s;
+
+}
+
+#cart-icon:hover {
+    opacity: 1;
+}
+
+.main-button {
+    border: 2px solid gray;
+    transition: 0.4s;
+}
+
+.main-button:hover {
+    background-color: transparent;
+    border: 2px solid black;
+}
+
+#user-container {
+    transition: 0.4s;
+}
+
+#user-container:hover {
+    background-color: gray;
+}
+
+#user-name {
+    font-size: 1.3em;
+    padding-left: 1vw;
+}
+
+.cover-container {
+    display: flex;
+    justify-content: center;  /* change maybe */
+    align-items: center;
+    background-color: black; /* change maybe */
+}
+
+@media only screen and (max-width: 800px) {
+    #sign-button {
+       font-size: 1em;
+   }
+
+   #user-container {
+       font-size: 0.8em;
+   }
+
+}
+
+@media only screen and (max-width: 500px) {
+    header, nav, .adaptive {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container {
+        margin: 1vh 0;
+    }
+
+    #sign-button {
+        font-size: 1.4em;
+        padding: 2vw;
+    }
+} 
