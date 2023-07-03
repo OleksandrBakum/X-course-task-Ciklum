@@ -1,98 +1,44 @@
- * {                        
-    padding: 0; 
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
- }
- 
-.bold-text {
-    font-weight: 600;
-}
-
-header {
-    border: 2px solid gray;
-    border-style: solid hidden;
-}
-
 .container {
     padding: 0.5vw;
 }
 
-.container, .nav-container, nav, #root {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav-container {
-    padding: 0 0.5vw;
-    cursor: pointer;
-}
-
-#cart-icon {
-    opacity: 0.6;
-    transition: 0.4s;
-}
-
-#cart-icon:hover {
-    opacity: 1;
-}
-
-.main-button {
-    font-size: 1.1rem;
-    padding: 0.7vw;
-    border-radius: 0.4vw;
-    border: 2px solid gray;
-    transition: 0.4s;
-    cursor: pointer;
-}
-
-.main-button:hover {
-    background-color: white;
-    border: 2px solid black;
-}
-
-#user-container {
-    border-radius: 5px;
-    transition: 0.4s;
-}
-
-#user-container:hover {
-    background-color: gray;
-}
-
-#user-name {
-    padding-left: 1vw;
+#sign-button, .main-button {
+    font-size: 1.1em;
+    padding: 0.7vw 1.5vw;
 }
 
 main {
-    font-size: 1.1rem;
+    font-size: 1.1em;
+    padding: 2vw;
 }
 
 .sort-container {
-    width: 33%;
-    margin: 1vw;
+    position: relative;
 }
 
-.inputs {
+.fields {
+    position: absolute;
     text-align: left;
     padding: 0.3vw;
-    font-size: 1.2rem;
-    border: 1px solid gray;;
+    font-size: 1.2em;
+    border: 1px solid gray;
 }
 
 #search-input {
-    margin-left: 4%;
-    width: 17vw;
+    width: 33vw;     
     background: url("../images/search.jpg") right no-repeat;
+    background-size: contain;
+}
+
+#search-input:focus {
+    box-shadow: 5px 5px 2px 2px gray;
 }
 
 #price-input {
-    margin-left: 6%;
-    width: 10vw;
-    border-radius: 8px;
+    margin-left: 40%; 
+    width: 12vw; 
     position: relative;
-    padding: 8px 20px 8px 8px;
+    padding: 0.3vw;
     /* appearance: none;            //style the triangle in select
     -webkit-appearance: none;
     -moz-appearance: none; */
@@ -100,43 +46,124 @@ main {
 
 #root {
     flex-wrap: wrap;
-    margin: 5vh auto;
+    margin-top: 2vw;
 }
 
 .book-item {
-    width: 20%;
-    height: 58%;
-    margin: 5vh 2vw;
-    border: 2px solid gray;
-    padding: 1vw;
-    display: flex;
+    position: relative;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    width: 28%;
+    padding: 1vw;
+    min-height: 55vh;
+    max-height: 55vh;
+    margin-bottom: 2vw;
+    border: 2px solid gray;
+}
+
+.cover-container {
+    max-width: 24.5vw;
+    min-width: 24.5vw;
+    min-height: 33vh;
+    max-height: 33vh;
+}
+
+.book-cover {
+    min-height: 33vh;
+    max-height: 33vh;
+    min-width: 15vw;
+    max-width: 15vw;
 }
 
 .text-container {
     display: flex;
     align-items: start;
     flex-direction: column;
-    margin-left: 5%;     /* not adaptive */
+    border: 1px dashed gray;
 }
 
-.book-item p, .book-item h3 {
+.text-container p, .text-container h3 {
     margin-top: 1vh;
 }
 
+.price-button-container {
+    position: absolute;
+    width: 93%;
+    bottom: 2vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline  ;
+    border: 1px dashed lightblue;
+}
+
 .price-text {
-    margin-left: auto;
+    font-size: 1.2em;
 }
 
-.view-button {
-    margin-left: 65%;  /* need to make relative and adaptive postitioning */
-    width: 6vw;
-    font-weight: 600;
+@media only screen and (max-width: 1000px) {
+    .text-container, .price-text {
+        font-size: 0.9em;
+    }
+    
+    .view-button {
+        font-size: 0.9em;
+        padding: 1vw 2vw;
+    }
 }
 
-.book-cover {
-    width: 15vw;
-    height: 35vh;
-    cursor: pointer;
+@media only screen and (max-width: 800px) {
+    .text-container, .price-text {
+        font-size: 0.9em;
+    }
 }
+
+@media only screen and (max-width: 750px) {
+    .fields {
+        font-size: 0.8em;
+    }
+    .book-item {
+        width: 45%;
+    }
+    .cover-container, .book-cover {
+        max-width: 35vh;
+    }        
+    .view-button {
+        font-size: 0.8em;
+        padding: 1vw 2vw;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .text-container, .price-text {
+        font-size: 0.9em;
+    }
+
+    #user-container {
+        font-size: 1em;
+    }     
+    .fields {
+        font-size: 0.7em;
+    }
+    main {
+        padding: 4vw 8vw;
+    }
+    .book-item {
+        width: 100%;
+        min-height: 50vh;
+        max-height: 50vh;
+        margin-bottom: 5vw;
+    }
+    .cover-container, .book-cover{
+        max-width: 55vh;
+    }
+    .price-button-container {
+        width: 98%;
+    }
+    .view-button {
+        padding: 1vw 2.5vw;
+    }
+}
+
+
+
